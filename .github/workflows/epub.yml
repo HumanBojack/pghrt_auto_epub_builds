@@ -16,7 +16,7 @@ jobs:
         - "${{ github.workspace }}:/app"
     steps:
       - name: Build epubs
-        working-directory: ./app
+        working-directory: app
         run: bash build_epub.sh
     
   
