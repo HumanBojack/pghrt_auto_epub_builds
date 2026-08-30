@@ -16,6 +16,6 @@ jobs:
         - ".:/app"
     steps:
       - name: Build epubs
-        run: cd /app && ./build_epub.sh
+        run: cd /app && ls && ./build_epub.sh
     
   
