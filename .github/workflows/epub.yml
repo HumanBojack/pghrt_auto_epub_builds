@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - "main"
+      - "test_github_actions"
+    paths:
+      - "trans/"
+  workflow_dispatch: 
+
+jobs:
+  build_epubs:
+    runs-on: ubuntu-latest
+    container:
+      image: pandoc/core:latest-ubuntu
+      volumes:
+        - ".:/app"
+    steps:
+      - name: Build epubs
+        run: cd /app && ./build_epub.sh
+    
+  
