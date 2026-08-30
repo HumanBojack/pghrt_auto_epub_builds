@@ -13,7 +13,7 @@ jobs:
     container:
       image: pandoc/core:latest-ubuntu
       volumes:
-        - ".:/app"
+        - "${{ github.workspace }}:/app"
     steps:
       - name: Build epubs
         run: cd /app && ls && ./build_epub.sh
